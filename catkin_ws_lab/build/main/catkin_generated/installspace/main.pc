@@ -1,0 +1,8 @@
+prefix=/home/cl/AAAProjects/AAAUdacity/roboND2/Proj2_Localization/P2_Root/catkin_ws/install
+
+Name: main
+Description: Description of main
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cl/AAAProjects/AAAUdacity/roboND2/Proj2_Localization/P2_Root/catkin_ws/install/lib 
+Requires: 

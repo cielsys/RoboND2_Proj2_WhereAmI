@@ -1,0 +1,8 @@
+prefix=/home/cl/AAAProjects/AAAUdacity/roboND2/Proj2_Localization/P2_Root/catkin_ws/devel
+
+Name: turtlebot_description
+Description: Description of turtlebot_description
+Version: 2.4.2
+Cflags: 
+Libs: -L/home/cl/AAAProjects/AAAUdacity/roboND2/Proj2_Localization/P2_Root/catkin_ws/devel/lib 
+Requires: urdf xacro
