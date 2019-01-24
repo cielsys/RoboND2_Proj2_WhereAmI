@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_ws_lab/src/odom_to_trajectory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_ws_lab/src/turtlebot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/catkin_ws_lab/src/turtlebot_simulator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mcllab" vcs="Git" />
+  </component>
+</project>
