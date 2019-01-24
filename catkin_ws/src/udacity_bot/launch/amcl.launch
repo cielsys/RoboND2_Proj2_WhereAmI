@@ -30,6 +30,7 @@
         <param name="update_min_d" value="0.01"/>
         <param name="update_min_a" value="0.005"/>
 
+
     </node>
 
     <!-- Move base -->
@@ -46,6 +47,7 @@
 
         <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
         <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+        <param name="controller_frequency" value="10"/>
 
     </node>
 

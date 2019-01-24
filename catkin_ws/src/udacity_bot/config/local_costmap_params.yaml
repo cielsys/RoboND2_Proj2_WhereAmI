@@ -3,8 +3,8 @@ local_costmap:
    robot_base_frame: robot_footprint
    update_frequency: 10.0
    publish_frequency: 5.0
-   width: 5.0
-   height: 5.0
-   resolution: 0.05
+   width: 4.0
+   height: 4.0
+   resolution: 0.075
    static_map: false
    rolling_window: true
