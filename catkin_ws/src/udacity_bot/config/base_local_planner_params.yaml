@@ -8,12 +8,12 @@ TrajectoryPlannerROS:
   acc_lim_x: 1.5
   acc_lim_y: 1.5
 
-  yaw_goal_tolerance: 0.03
-  xy_goal_tolerance: 0.07
+  yaw_goal_tolerance: 0.05
+  xy_goal_tolerance: 0.1
 
   meter_scoring: true
-  pdist_scale: 1.0
-  gdist_scale: 0.4
+  pdist_scale: 4.0
+  gdist_scale: 2.0
   sim_time: 1.5
 
   holonomic_robot: false

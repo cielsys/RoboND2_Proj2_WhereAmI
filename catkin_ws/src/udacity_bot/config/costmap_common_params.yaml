@@ -3,12 +3,12 @@ map_type: costmap
 obstacle_range: 4.0
 raytrace_range: 4.0
 
-transform_tolerance: 0.2
+transform_tolerance: 0.3
 
 robot_radius: 0.0
 inflation_radius: 0.7
-xy_goal_tolerance: 0.075
-yaw_goal_tolerance: 0.05
+xy_goal_tolerance: 0.1
+yaw_goal_tolerance: 0.075
 always_send_full_costmap: true
 
 observation_sources: laser_scan_sensor
