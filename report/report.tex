@@ -19,12 +19,12 @@
 \IEEEtitleabstractindextext{%
 
 \begin{abstract}
-Abstract
+This project is an exercise to create a simulated robot that demonstrates Adaptive Monte Carlo Localization (AMCL) within the ROS framework to permit navigation within a small simulated "Gazebo" world. A differential drive robot is designed to operate within the Gazebo simulation and uses the ROS navigation stack and the AMCL package for localization within the supplied map. The RViz visualization tool is used to observe the the robot and the relevant paths, maps and point clouds as it traverses to a predefined goal. The tuning of configuration parameters of the simulation, navigation stack and AMCL package neccesary for success are discussed.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Robot, Mobile Robot.
+Mobile Robot, Localization, Monte Carlo Localiztion, ROS.
 \end{IEEEkeywords}}
 
 
@@ -32,11 +32,12 @@ Robot, Mobile Robot.
 \IEEEdisplaynontitleabstractindextext
 \IEEEpeerreviewmaketitle
 \section{Introduction}
-Intro
+\IEEEPARstart{M}{obile} robots must be able to determine their location within their region of operation, a process known as localization, and navigate to other locations accurately in order to perform their tasks succesfully.
+The process of robotic localization requires a known, predefined 'ground truth' map within which the robot, using sensors of various kinds, must establish the exact coordinates, in our case 2D coordinates, of its current location as it moves about the map. The are 3 primary categories of localization, in order of increasing complexity: 'local', 'global' and what is termed 'kidnapped robot' localization. In 'local localization' a robot's position is initially known and the robot must only keep track of its changing location as it moves. In 'global localization' the robot does not initially know its location within the map and must, over time, resolve its location using information from its sensors and the ground truth map. In 'kidnapped robot' localization the robot must always assume that it beleived location could be in error and must constantly recalculate its location anew.
+In this project only the simple 'local localization' is demonstrated. That is, the initial location is known accurately and in must keep track of the location as it moves.
 \label{sec:introduction}
 
-\IEEEPARstart{T}{he}. 
-Intro
+
 
 \section{Background / Formulation}
 Background
