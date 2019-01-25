@@ -10,10 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f81cf54b-2bb3-44ed-bb32-298c29d41048" name="Default Changelist" comment="Added camera... can't change color of it...">
+      <change beforePath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf/robot_pose_ekf.launch" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf/robot_pose_ekf.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcllab" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab/Images/Step0.png" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/Images/Step0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab/Images/Step49.png" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/Images/Step49.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/amcl.launch">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -143,7 +150,7 @@
         <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/config/local_costmap_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -426,7 +433,7 @@
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/amcl.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -454,7 +461,7 @@
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/config/local_costmap_params.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
