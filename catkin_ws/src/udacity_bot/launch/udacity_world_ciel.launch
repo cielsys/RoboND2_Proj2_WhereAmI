@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
-    <include file="$(find udacity_bot)/launch/robot_description.launch"/>
+    <include file="$(find udacity_bot)/launch/robot_description_ciel.launch"/>
 
     <arg name="world" default="empty"/>
     <arg name="paused" default="false"/>
@@ -20,15 +20,13 @@
         <arg name="debug" value="$(arg debug)"/>
     </include>
 
-    <arg name="which_robot" default="udacity_bot"/>
-    <!-- <arg name="which_robot" default="ciel_bot"/> -->
+    <!-- <arg name="which_robot" default="udacity_bot"/> -->
+    <arg name="which_robot" default="udacity_bot_ciel"/>
 
     <!--spawn a robot in gazebo world-->
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false"
           output="screen" args="-urdf -param robot_description
-            -model $(arg which_robot)"/>
-
-            <!-- -model udacity_bot"/> -->
+          -model udacity_bot_ciel"/>
 
     <!--launch rviz-->
     <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d /home/cl/AAAProjects/AAAUdacity/roboND2/Proj2_Localization/P2_Root/catkin_ws/src/udacity_bot/launch/udacity_bot.rviz"/>

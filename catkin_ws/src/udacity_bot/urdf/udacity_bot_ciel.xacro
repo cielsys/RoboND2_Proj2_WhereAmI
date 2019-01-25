@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 
 <robot name="udacity_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find udacity_bot)/urdf/udacity_bot.gazebo" />
 
     <link name="robot_footprint"></link>
 
@@ -35,6 +36,9 @@
             <geometry>
                 <box size=".4 .2 .1"/>
             </geometry>
+            <material name="purple">
+                <color rgba="0.5 0 0.5 1"/>
+            </material>
         </visual>
 
 
@@ -69,8 +73,8 @@
     </link>
 
     <!-- *********  Left Wheel ******************************** -->
-    <joint type="continuous" name="left_wheel_hinge">
-        <origin xyz="0 0.15 0" rpy="0 0 0"/>
+    <joint name="left_wheel_hinge" type="continuous">
+        <origin xyz="0.15 0.15 0" rpy="0 0 0"/>
         <child link="left_wheel"/>
         <parent link="chassis"/>
         <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -78,7 +82,8 @@
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
 
-    <link name="left_wheel">
+    <link name='left_wheel'>
+
         <inertial>
             <mass value="5.0"/>
             <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
@@ -88,13 +93,14 @@
                     izz="0.1"
             />
         </inertial>
+
         <visual>
             <geometry>
                 <cylinder length="0.05" radius="0.1"/>
             </geometry>
             <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
-            <material name="white">
-                <color rgba="1 1 1 1"/>
+            <material name="green">
+                <color rgba="0 1 0 1"/>
             </material>
         </visual>
         <collision>
@@ -106,16 +112,17 @@
     </link>
 
     <!-- *********  Right Wheel ******************************** -->
-    <joint type="continuous" name="right_wheel_hinge">
-        <origin xyz="0 -0.15 0" rpy="0 0 0"/>
-        <child link="left_wheel"/>
+    <joint name="right_wheel_hinge" type="continuous">
+        <origin xyz="0.15 -0.15 0" rpy="0 0 0"/>
+        <child link="right_wheel"/>
         <parent link="chassis"/>
         <axis xyz="0 1 0" rpy="0 0 0"/>
         <limit effort="10000" velocity="1000"/>
         <dynamics damping="1.0" friction="1.0"/>
     </joint>
 
-    <link name="reft_wheel">
+    <link name='right_wheel'>
+
         <inertial>
             <mass value="5.0"/>
             <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
@@ -125,13 +132,14 @@
                     izz="0.1"
             />
         </inertial>
+
         <visual>
             <geometry>
                 <cylinder length="0.05" radius="0.1"/>
             </geometry>
             <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
-            <material name="white">
-                <color rgba="1 1 1 1"/>
+            <material name="green">
+                <color rgba="0 1 0 1"/>
             </material>
         </visual>
         <collision>
@@ -141,5 +149,74 @@
             <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
         </collision>
     </link>
+
+    <!-- *********  Camera ******************************** -->
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0.2 0 0" rpy="0 0 0"/>
+        <child link="camera"/>
+        <parent link="chassis"/>
+    </joint>
+
+    <link name='camera'>
+
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia
+                    ixx="1e-6" ixy="0" ixz="0"
+                    iyy="1e-6" iyz="0"
+                    izz="1e-6"
+            />
+        </inertial>
+
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="blue">
+                <color rgba="0 0 1 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.05 0.05 0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <!-- *********  Laser Rangefinder ******************************** -->
+    <joint type="fixed" name="hokuyo_joint">
+        <origin xyz="0.15 0 0.1" rpy="0 0 0"/>
+        <child link="hokuyo"/>
+        <parent link="chassis"/>
+    </joint>
+
+    <link name="hokuyo">
+
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <inertia
+                    ixx="1e-6" ixy="0" ixz="0"
+                    iyy="1e-6" iyz="0"
+                    izz="1e-6"
+            />
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="package://udacity_bot/meshes/hokuyo.dae"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
 
 </robot>
