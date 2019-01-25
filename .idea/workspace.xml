@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f81cf54b-2bb3-44ed-bb32-298c29d41048" name="Default Changelist" comment="Added camera... can't change color of it...">
-      <change afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description_ciel.launch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world_ciel.launch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.gazebo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_bot.rviz" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_bot.rviz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world.launch" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_scrap.xacro" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf/robot_pose_ekf.launch" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws_lab/src/robot_pose_ekf/robot_pose_ekf.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab" afterDir="false" />
@@ -47,7 +42,7 @@
           <entry key="bashrc" value="2" />
           <entry key="c" value="1" />
           <entry key="cpp" value="2" />
-          <entry key="gazebo" value="4" />
+          <entry key="gazebo" value="7" />
           <entry key="launch" value="11" />
           <entry key="log" value="2" />
           <entry key="md" value="2" />
@@ -55,7 +50,7 @@
           <entry key="tex" value="1" />
           <entry key="txt" value="3" />
           <entry key="world" value="2" />
-          <entry key="xacro" value="5" />
+          <entry key="xacro" value="7" />
           <entry key="xml" value="1" />
           <entry key="yaml" value="7" />
         </counts>
@@ -67,7 +62,7 @@
           <entry key="Markdown" value="2" />
           <entry key="ObjectiveC" value="3" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="XML" value="17" />
+          <entry key="XML" value="22" />
           <entry key="YAML" value="7" />
         </counts>
       </usages-collector>
@@ -77,7 +72,7 @@
           <entry key="launch" value="279" />
           <entry key="md" value="38" />
           <entry key="txt" value="58" />
-          <entry key="xacro" value="375" />
+          <entry key="xacro" value="423" />
           <entry key="yaml" value="102" />
         </counts>
       </usages-collector>
@@ -86,7 +81,7 @@
           <entry key="CMakeLists.txt" value="15" />
           <entry key="Markdown" value="38" />
           <entry key="PLAIN_TEXT" value="98" />
-          <entry key="XML" value="617" />
+          <entry key="XML" value="665" />
           <entry key="YAML" value="102" />
         </counts>
       </usages-collector>
@@ -102,80 +97,88 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world_ciel.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description_ciel.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="117" selection-start-line="4" selection-start-column="117" selection-end-line="4" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.gazebo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.gazebo">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world.launch">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world_ciel.launch">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="66">
+                  <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description.launch">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description_ciel.launch">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="88">
+                  <caret line="4" column="117" selection-start-line="4" selection-start-column="117" selection-end-line="4" selection-end-column="117" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.gazebo">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="880">
+                  <caret line="187" column="24" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.gazebo">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="924">
+                  <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -210,9 +213,9 @@
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/config/local_costmap_params.yaml" />
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world.launch" />
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description_ciel.launch" />
-        <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro" />
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description.launch" />
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/udacity_world_ciel.launch" />
+        <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro" />
         <option value="$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro" />
       </list>
     </option>
@@ -537,20 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.gazebo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.gazebo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/robot_description.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -565,17 +554,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.gazebo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.gazebo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot.xacro">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+        <state relative-caret-position="880">
+          <caret line="187" column="24" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/urdf/udacity_bot_ciel.xacro">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="924">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
         </state>
       </provider>
     </entry>
