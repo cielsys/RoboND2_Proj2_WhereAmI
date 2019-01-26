@@ -16,11 +16,6 @@
       <change beforePath="$PROJECT_DIR$/mcllab/Images/Step0.png" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/Images/Step0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab/Images/Step49.png" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/Images/Step49.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mcllab/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mcllab/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,8 +173,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/amcl.launch">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="39" column="32" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="32" />
+                <state relative-caret-position="536">
+                  <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -228,6 +223,7 @@
       <find>sim_time</find>
       <find>udacity_bot.gazebo</find>
       <find>odom_a</find>
+      <find>inflation_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -397,6 +393,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3190" y="0" width="2414" height="2155" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15870307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -626,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/udacity_bot/launch/amcl.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="536">
+          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
         </state>
       </provider>
     </entry>
