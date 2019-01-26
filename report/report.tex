@@ -31,6 +31,7 @@ Mobile Robot, Localization, Monte Carlo Localiztion, ROS.
 \maketitle
 \IEEEdisplaynontitleabstractindextext
 \IEEEpeerreviewmaketitle
+\label{sec:Introduction}
 \section{Introduction}
 \IEEEPARstart{M}{obile} robots must be able to determine their location within their region of operation, a process known as localization, and navigate to other locations reliably in order to perform their tasks succesfully. \hfill \vspace{\baselineskip}
 
@@ -40,26 +41,34 @@ In 'local localization' a robot's position is initially known and the robot must
 
 In this project only the simple 'local localization' is demonstrated. That is, the initial location is known accurately and the robot must keep track of its location as it moves.
 
-\label{sec:introduction}
 \section{Background / Formulation}
 Because localization is so important for mobile robotics it is a highly researched field and has many well developed techniques and technologies. Most people are familiar with the Global Positioning System (GPS) which permits an electronic device to directly infer its latitude, longitude and altitude based on signals received from GPS satellites. Other techniques such as Kalman filtering and Monte Carlo Localization (aka 'Particle Filter') are techniques that can take input from a variety of sensors and over time compute estimates of the current location. Such sensors include radar, laser scanners, cameras, odometry sensors, Inertial Measurement Units (IMU), sonar, compass sensors and more. In many cases multiple sensor inputs are used simulataneously with theses techniques in a process known as Sensor Fusion. Selecting techniques and sensors is part of the complicated design process of a robot and of course depends on the intended application, the intended environment, eg indoor or outdoor, and the typical engineering constraints of cost, size, power, sensor noise, computational power, and required reliability and performance goals.  \hfill \vspace{\baselineskip}
 
 For this simulation project we are, fortunately, given absolute constraints on all of these design considerations. Specifically the robot is to be a wheeled, differential drive robot operating in a small, flat, 2D environment with only noiseless wheel odometry sensors and a laser scanner and we will discuss only the Kalman filter Monte Carlo Localization techniques and only implement to Monte Carlo technique. Furthermore the application is to occur in a ROS Gazebo simulated environment with a predfined, known 'ground truth' map and a very simple objective of navigating to a predefined goal location.  \hfill \vspace{\baselineskip}
 
-This simple robot objective is, of course, merely a context for the wider objective of learning about some techiques and technologies of mobile robotic design. Specifically we are gaining knowledge of the using ROS robotics framework for robotic system design and the the ROS Gazebo simulation environment for design R\&D and test and using the ROS Adaptive Monte Carlo Localization (AMCL) package with odometry and laser scanner sensors to learn about important parameter tuning considerations. 
+This simple robot objective is, of course, merely a context for the wider objective of learning about techiques and technologies of mobile robotic design. Specifically we are gaining knowledge of the using ROS robotics framework for robotic system design and the the ROS Gazebo simulation environment for development and test and using the ROS Adaptive Monte Carlo Localization (AMCL) package with odometry and laser scanner sensors to learn about important parameter tuning considerations. 
 
-\subsection{Kalman Filter}
-Subsection
+Adaptive Monte Carlo Localization (AMCL) is further discussed below. 
+Another powerful localization technique is the Kalman filter. Although the Kalman filter is not used in this project it was used in earlier Lab projects and so it also discussed below.
 
 \subsection{Adaptive Monte Carlo Localization}
-Subsection
+The Adaptive Monte Carlo Localization (AMCL) technique, aka 'particle filter', creates a set of hypothetical robot states, or 'particles' distributed at random locations and orientations (aka 'poses' in ROS terminology) around the map. Each of the particles represent a \textit{possible} pose that \textit{ might} correspond to robot's true pose. It then computes the expected laser observations for each of those particles and compares each of those observations against the actual observation and establishes a likelihoood weight for each particle. The likelihood weight represents the degree of correspondence between the particle observation and the actual. The particles with the lowest weights are eliminated from the set of particles. After this the AMCL uses more actual sensor data, in our case the odometry sensors, to update the particle poses to the expected locations due to the movement of the robot. Then the AMCL repeats the process. In this way the algorithm will converge on a set of particles that have a best fit to the actual laser scan observations and either the 'best' particle or an average location of the those best particles will be interpreted as the true location of the robot.
+There are many variations of managing the particle set. For example the 'Adaptive' aspect of the AMCL package reduces the total number of particles if the best particles appear to be converging, or adds new particles when the best particles do not appear to correlate well. Another technique is to constantly add new, randomly placed particles to allow the algorithm to 'escape' in the case that it has converged on an incorrect pose, as might easily occur in an environment with a repeating or symetrical spatial features such as a hallway or building with identical rooms even simply in square room with 2 identical doors.
+\hfill \vspace{\baselineskip}
+The AMCL implementation used in this project is encapsulated in the ROS AMCL package. The AMCL package is closely integrated with ROS navigation stack, specifically with the Move\_base package, the odometry and hokuyo laser scanner system and the tf reference frame transform package. \textbf{ XXX}.
+
+\subsection{Kalman Filter}
+Another powerful localization technique is the Kalman filter. Although the Kalman filter is not used in this project it was used in earlier Lab projects. The Kalman filter is an estimation algorithm that treats both the actual state and the observations, from potentially several sensors, as gaussian distributions and combines the two in proportion to the klamn gain which is a value that gives higher weight to quanitities with least uncertainty. As the algorithm iterates it is typically able to converge on a pose with minimal uncertainty.
+One of complication of the kalmin filter is that it requires that the error of the sensors be linear and well characterized and be a gaussian distribution. In cases where this does not hold a modified kalman filter, known as the Extended Kalman Filter (EKF), can linearize the uncertainty functions by applying a jacobian transform. This adds complexity to using the kalman filter on some sensors.
+
+\subsection{Monte Carlo vs Kalman Filter}
+The MCL techinique is the usual first choice because of its comparitive simplicity and the fact that KF or EKF require knowledge of the sensors uncertainty and that the uncertainties either be a well know, normal distribution and in the cases on non-linearities require more complicated mathematic functions to implemented to linearize it. MCL also can be configured to deal with global localization while EKF can not. On the other hand EKF is more memory and processor efficient so may be worth the extra effort on a smaller computer or if power is a constraint.
 
 \section{Results}
-Results
+After tuning both models could relaibly navigate to the test goal location.
 
-\subsection{Udacity-Bot}
-The initial spread of Monte Carlo particles can be seen. (Fig ~\ref{fig:UdaBot Initial Particles})
-The converged Monte Carlo particles at the goal can be seen. (Fig ~\ref{fig:UdaBot Goal Particles})
+\subsection{Results: Udacity-Bot}
+The Udacity\_bot reliably navigated to the goal in about 90 seconds without any spinning or need for recovery. The initial spread of Monte Carlo particles can be seen in Fig ~\ref{fig:UdaBot Initial Particles}. The converged Monte Carlo particles at the goal can be seen in Fig ~\ref{fig:UdaBot Goal Particles}. The convergence of particles was very rapid: Within seconds of navigation the particles converged to a very accurate estimation of the actual robot pose.
 
 \begin{figure}[h]
       \centering
@@ -75,9 +84,12 @@ The converged Monte Carlo particles at the goal can be seen. (Fig ~\ref{fig:UdaB
       \label{fig:UdaBot Goal Particles}
 \end{figure}
 
-\subsection{Ciel-Bot}
-The initial spread of Monte Carlo particles can be seen. (Fig ~\ref{fig:CielBot Initial Particles})
-The converged Monte Carlo particles at the goal can be seen. (Fig ~\ref{fig:CielBot Goal Particles})
+\subsection{Results: Ciel-Bot}
+The custom Ciel\_bot reliably navigated to the goal in about 100 seconds without any spinning or need for recovery. Since the design is so similar to the udacity bot the same tuning parameters were used. Concern that the obstruction inflation parameter would need to increase because of the wider wheel base was proven unfounded - it seemed to cut close as it rounded the obstruction but it did not get hung up.
+The initial spread of Monte Carlo particles can be seen in Fig ~\ref{fig:cielBot Goal Particles}. 
+It is noted that randomization of the initial particles matches exactly those in the seen with the udacity\_bot, which would suggest that the randomization seed is always the same by default, which would make sense when doing testing on robots. As with the udacity bot the particles converged very quickly, in seconds, to a seemingly single particle.
+
+The final, converged Monte Carlo particles at the goal can be seen in Fig ~\ref{fig:cielBot Goal Particles}.
 
 \begin{figure}[h]
       \centering
@@ -95,13 +107,15 @@ The converged Monte Carlo particles at the goal can be seen. (Fig ~\ref{fig:Ciel
 
 
 \section{Model Configuration}
-Model Configuration
+Tuning the parameters of the model was a time consuming and haphazard process, esecially in light of the sparse instructions provided and the terse documention available.
+A minimum of guidance from the project description provided suggestions on how to proceed and various web resources including the ROS Navigation Tuning Guide and the udacity forums provided various tips on parameters of interest. With this nebulous set of tips I was able to slowly make progress on improving the behaviour of the robot. Following is a summary of some of the parameter modifications that were found to be helpful.
 
 \subsection{Udacity-Bot}
-Subsection
+The first runs of the bot generated many timeout errors - it seemed the processing load was too much for the laptop used, so ways to decrease the processing load were reviewed in the various resources listed above. The first thing change was to decrease the min and max particles drastically. In the final configuration successful navigation was obtained using a min of 10 particles and a max of just 30. Next was a decrease in the size and resolution local cost map seemed to help, although this was decreased even further later for other reasons. 
+There were still some timeout warnings, which without clear guidance as to what processes were actually timing out led to decreasing numerous publishing and update frequencies: in costmap\_common global\_costmap and local\_costmap. Some timeouts continued but the bot was showing signs of navigating albeit in a jerky motion and very jerky map updates. Next up were the odom\_alphas 1-4. Setting larger than the default (0.2) seemed to create particle divergence. All were set to a very small value (0.005) compared to the default and this sped up paricle convergence. The inflation\_radius was increased to 0.7 and this caused the robot to give a clearance buffer around obstacles that decreased collisions. There were times when the robot would turn into the wall, especially near the hairpin turn. Decreasing the local cost map size even further ensured that the robot would not attempt a local 'shortcut' to the global path nearby on the the other side of the barrier. Increasing the pdist parameter also helped keep very close to the global path.
 
 \subsection{Ciel-Bot}
-Subsection
+Do to shortage of time the custom robot was designed only superficially different from the udacity bot. This permitted reuse of all of the parameters used by the udacity bot. Even this had some problems. Putting the laser in the middle of the chassis disk caused the laser to to scan the tops of the wheels. The dimensions of the wheels, casters and the disk all had to be redesigned to avoid this while also ensuring that the laser scanner remained perfectly horizontal.
 
 
 \section{Discussion}
