@@ -10,7 +10,7 @@ It contains also some of the lab materials.
 The ROS source directory is <br>
 $REPO/catkin_ws/src
 
-The project report is [./report/report.pdf](report.pdf)<br/>
+The project report is [report.pdf](./report/report.pdf)<br/>
 
 To run the udacity bot:
 ```commandline
